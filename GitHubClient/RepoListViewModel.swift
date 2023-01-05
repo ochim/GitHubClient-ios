@@ -11,6 +11,12 @@ import Foundation
 class RepoListViewModel: ObservableObject {
     @Published private(set) var state: Stateful<[Repo]> = .idle
     
+    private let repoRepository: RepoRepository
+    
+    init(repoRepository: RepoRepository = RepoDataRepository()) {
+        self.repoRepository = repoRepository
+    }
+    
     func onAppear() async {
         await loadRepos()
     }
@@ -23,7 +29,7 @@ class RepoListViewModel: ObservableObject {
         state = .loading
         
         do {
-            let value = try await RepoRepository().fetchRepos()
+            let value = try await repoRepository.fetchRepos()
             state = .loaded(value)
         } catch {
             state = .failed(error)

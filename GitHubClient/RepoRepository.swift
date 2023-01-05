@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct RepoRepository {
+protocol RepoRepository {
+    func fetchRepos() async throws -> [Repo]
+}
+
+struct RepoDataRepository: RepoRepository {
     func fetchRepos() async throws -> [Repo] {
-        return try await RepoAPIClient().getRepos()
+        try await RepoAPIClient().getRepos()
     }
 }
