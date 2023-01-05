@@ -17,6 +17,10 @@
 		569AA1FA2961C7D800E6194A /* RepoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569AA1F92961C7D800E6194A /* RepoDetailView.swift */; };
 		569AA1FE2961CBC400E6194A /* User+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569AA1FD2961CBC400E6194A /* User+mock.swift */; };
 		569AA2002961CBD700E6194A /* Repo+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569AA1FF2961CBD700E6194A /* Repo+mock.swift */; };
+		56FF560F29671692002C3300 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF560E29671692002C3300 /* RepoListViewModel.swift */; };
+		56FF5611296716CB002C3300 /* RepoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF5610296716CB002C3300 /* RepoRepository.swift */; };
+		56FF5613296716F2002C3300 /* RepoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF5612296716F2002C3300 /* RepoAPIClient.swift */; };
+		56FF56152967174E002C3300 /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF56142967174E002C3300 /* Stateful.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		569AA1FD2961CBC400E6194A /* User+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+mock.swift"; sourceTree = "<group>"; };
 		569AA1FF2961CBD700E6194A /* Repo+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repo+mock.swift"; sourceTree = "<group>"; };
 		56A0E0FB29646DAD0015ED11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = GithubClient/Info.plist; sourceTree = "<group>"; };
+		56FF560E29671692002C3300 /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
+		56FF5610296716CB002C3300 /* RepoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRepository.swift; sourceTree = "<group>"; };
+		56FF5612296716F2002C3300 /* RepoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoAPIClient.swift; sourceTree = "<group>"; };
+		56FF56142967174E002C3300 /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,10 @@
 				569AA1FB2961C89100E6194A /* Views */,
 				569AA1E8295DAF3600E6194A /* Assets.xcassets */,
 				569AA1F62961BC8000E6194A /* Models */,
+				56FF560E29671692002C3300 /* RepoListViewModel.swift */,
+				56FF5610296716CB002C3300 /* RepoRepository.swift */,
+				56FF5612296716F2002C3300 /* RepoAPIClient.swift */,
+				56FF56142967174E002C3300 /* Stateful.swift */,
 				569AA1EA295DAF3600E6194A /* Preview Content */,
 			);
 			path = GitHubClient;
@@ -182,6 +194,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				569AA1F82961C1C200E6194A /* RepoRow.swift in Sources */,
+				56FF56152967174E002C3300 /* Stateful.swift in Sources */,
+				56FF5611296716CB002C3300 /* RepoRepository.swift in Sources */,
 				569AA1FE2961CBC400E6194A /* User+mock.swift in Sources */,
 				569AA1F52961BC7200E6194A /* User.swift in Sources */,
 				569AA1F32961BC5F00E6194A /* Repo.swift in Sources */,
@@ -189,6 +203,8 @@
 				569AA2002961CBD700E6194A /* Repo+mock.swift in Sources */,
 				569AA1E7295DAF3500E6194A /* RepoListView.swift in Sources */,
 				569AA1E5295DAF3500E6194A /* GitHubClientApp.swift in Sources */,
+				56FF5613296716F2002C3300 /* RepoAPIClient.swift in Sources */,
+				56FF560F29671692002C3300 /* RepoListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
