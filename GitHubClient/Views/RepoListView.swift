@@ -20,11 +20,11 @@ struct RepoListView: View {
                 switch viewModel.state {
                 case .idle, .loading:
                     ProgressView("loading...")
-                case .failed:
+                case .failed(let error):
                     VStack {
                         Group {
                             Image("GitHubMark")
-                            Text("Failed to load repositories.")
+                            Text("Failed to load repositories. \(error.localizedDescription)")
                                 .padding(.top, 4)
                         }
                         .foregroundColor(.black)
