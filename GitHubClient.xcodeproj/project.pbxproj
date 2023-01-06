@@ -22,6 +22,8 @@
 		56FF5613296716F2002C3300 /* RepoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF5612296716F2002C3300 /* RepoAPIClient.swift */; };
 		56FF56152967174E002C3300 /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF56142967174E002C3300 /* Stateful.swift */; };
 		56FF561D2967282A002C3300 /* RepoListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF561C2967282A002C3300 /* RepoListViewModelTests.swift */; };
+		56FF562429684BE3002C3300 /* DummyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF562329684BE3002C3300 /* DummyError.swift */; };
+		56FF562729684C06002C3300 /* MockRepoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FF562629684C06002C3300 /* MockRepoRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		56FF56142967174E002C3300 /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
 		56FF561A2967282A002C3300 /* GithubClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56FF561C2967282A002C3300 /* RepoListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModelTests.swift; sourceTree = "<group>"; };
+		56FF562329684BE3002C3300 /* DummyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyError.swift; sourceTree = "<group>"; };
+		56FF562629684C06002C3300 /* MockRepoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 			children = (
 				569AA1FD2961CBC400E6194A /* User+mock.swift */,
 				569AA1FF2961CBD700E6194A /* Repo+mock.swift */,
+				56FF562329684BE3002C3300 /* DummyError.swift */,
+				56FF562629684C06002C3300 /* MockRepoRepository.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -258,10 +264,12 @@
 				56FF5611296716CB002C3300 /* RepoRepository.swift in Sources */,
 				569AA1FE2961CBC400E6194A /* User+mock.swift in Sources */,
 				569AA1F52961BC7200E6194A /* User.swift in Sources */,
+				56FF562729684C06002C3300 /* MockRepoRepository.swift in Sources */,
 				569AA1F32961BC5F00E6194A /* Repo.swift in Sources */,
 				569AA1FA2961C7D800E6194A /* RepoDetailView.swift in Sources */,
 				569AA2002961CBD700E6194A /* Repo+mock.swift in Sources */,
 				569AA1E7295DAF3500E6194A /* RepoListView.swift in Sources */,
+				56FF562429684BE3002C3300 /* DummyError.swift in Sources */,
 				569AA1E5295DAF3500E6194A /* GitHubClientApp.swift in Sources */,
 				56FF5613296716F2002C3300 /* RepoAPIClient.swift in Sources */,
 				56FF560F29671692002C3300 /* RepoListViewModel.swift in Sources */,

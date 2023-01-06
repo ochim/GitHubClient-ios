@@ -10,8 +10,8 @@ import SwiftUI
 struct RepoListView: View {
     @StateObject private var viewModel: RepoListViewModel
     
-    init() {
-        _viewModel = StateObject(wrappedValue: RepoListViewModel())
+    init(viewModel: RepoListViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
@@ -64,6 +64,34 @@ struct RepoListView: View {
 
 struct RepoListView_Previews: PreviewProvider {
     static var previews: some View {
-        RepoListView()
+        Group {
+            RepoListView(
+                viewModel: RepoListViewModel(
+                    repoRepository: MockRepoRepository(
+                        repos: [
+                            .mock1, .mock2, .mock3, .mock4, .mock5
+                        ]
+                    )
+                )
+            )
+            .previewDisplayName("Default")
+            RepoListView(
+                viewModel: RepoListViewModel(
+                    repoRepository: MockRepoRepository(
+                        repos: []
+                    )
+                )
+            )
+            .previewDisplayName("Empty")
+            RepoListView(
+                viewModel: RepoListViewModel(
+                    repoRepository: MockRepoRepository(
+                        repos: [],
+                        error: DummyError()
+                    )
+                )
+            )
+            .previewDisplayName("Error")
+        }
     }
 }
