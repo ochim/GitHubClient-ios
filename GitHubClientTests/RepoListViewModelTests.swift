@@ -9,15 +9,22 @@ import XCTest
 @testable import GithubClient
 
 class RepoListViewModelTests: XCTestCase {
+    struct DummyError: Error {}
+    
     struct MockRepoRepository: RepoRepository {
         let repos: [Repo]
+        let error: Error?
 
-        init(repos: [Repo]) {
+        init(repos: [Repo], error: Error? = nil) {
             self.repos = repos
+            self.error = error
         }
 
         func fetchRepos() async throws -> [Repo] {
-            repos
+            if let error = error {
+                throw error
+            }
+            return repos
         }
     }
 
@@ -38,5 +45,23 @@ class RepoListViewModelTests: XCTestCase {
         }
     }
     
+    func test_onAppear_異常系() async {
+        let viewModel = await RepoListViewModel(
+            repoRepository: MockRepoRepository(
+                repos: [],
+                error: DummyError()
+            )
+        )
+
+        await viewModel.onAppear()
+
+        switch await viewModel.state {
+        case let .failed(error):
+            XCTAssert(error is DummyError)
+        default:
+            XCTFail()
+        }
+
+    }
 }
 
