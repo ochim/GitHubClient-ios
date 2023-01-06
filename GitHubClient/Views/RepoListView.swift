@@ -20,7 +20,7 @@ struct RepoListView: View {
                 switch viewModel.state {
                 case .idle, .loading:
                     ProgressView("loading...")
-                case .failed(let error):
+                case let .failed(error):
                     VStack {
                         Group {
                             Image("GitHubMark")
